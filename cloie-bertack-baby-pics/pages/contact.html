@@ -37,6 +37,35 @@
   </header>
 
   <main>
+    <h1>Prenez rendez-vous avec moi</h1>
+
+    <section id="contact-form">
+      <form>
+        <label for="name">Nom</label>
+          <input type="text" id="name" placeholder="Nom" required>
+        <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" placeholder="Prénom" required>
+        <label for="email">Email</label>
+          <input type="email" id="email" required>
+        <label for="tel">Numéro de Téléphone</label>
+          <input type="tel" id="tel" required>
+        <label for="what">Que voulez vous faire ?</label>
+          <select id="what" required>
+            <option value="" disabled selected>Choissisez une option</option>
+            <option value="shooting-grossesse">Shooting Grossesse</option>
+            <option value="shooting-">Shooting Nouveau-né</option>
+            <option value="shooting-">Shooting Bébé</option>
+            <option value="autres">Autres</option>
+          </select>
+        <label for="message">Message</label>
+          <input id="message" for="text" required placeholder="Ecrivez votre message ici" size="1000">
+      
+        <div class="send-button">
+          <input type="submit" value="Envoyez">
+        </div>
+      </form>
+    </section>
+
   </main>
 
   <div id="btt">
