@@ -1,0 +1,11 @@
+/* Main Site colors*/
+/* Fonts to use in the site*/
+/* Weights for the text */
+header #logo {
+  display: flex;
+  justify-content: center;
+  width: 5vh 4vw;
+  background: black;
+}
+
+/*# sourceMappingURL=style.css.map */
