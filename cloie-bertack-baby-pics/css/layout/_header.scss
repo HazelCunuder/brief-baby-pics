@@ -2,13 +2,17 @@
 @use '../base/typography';
 
 header {
+    
+    content: 2vh 100%;
+
     #logo {
         display: flex;
         justify-content: center;
-        background: black;
-
+        flex-wrap: nowrap;
+        background: variables.$main-color;
+        
         img {
-            width: 480px;
+            width: 10vw;
         }
     }
 }
