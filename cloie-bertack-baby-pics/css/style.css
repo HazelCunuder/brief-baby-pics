@@ -1,11 +1,35 @@
 /* Main Site colors*/
 /* Fonts to use in the site*/
 /* Weights for the text */
+header {
+  content: 2vh 100%;
+}
 header #logo {
   display: flex;
   justify-content: center;
-  width: 5vh 4vw;
-  background: black;
+  flex-wrap: nowrap;
+  background: #DBB4BB;
+}
+header #logo img {
+  width: 10vw;
+}
+
+.illustration-cta img {
+  width: 50%;
+}
+
+#service-accueil article {
+  width: 100%;
+}
+#service-accueil img {
+  width: 50vw;
+}
+
+#reviews {
+  width: 100%;
+}
+#reviews img {
+  width: 33%;
 }
 
 /*# sourceMappingURL=style.css.map */
