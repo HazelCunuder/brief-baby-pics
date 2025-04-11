@@ -1,6 +1,51 @@
-.illustration-cta {
-    img {
-        width: 50%
+@use '../base/typography';
+@use '../abstracts/variables' as *;
+@use '../components/buttons';
+
+#cta {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0% 100%;
+    
+
+    h1 {
+        visibility: hidden;
+        grid-column: span 2;
+        justify-self: center;
+        margin: -15vh;
+    }
+
+    .cta {
+        background: $main-color;
+        align-content: right;
+        padding: 15%;
+
+        h2 {
+            text-align: center;
+            background: $secondary-color;
+            padding-top: 3vh;
+            border-top-left-radius: 2.5em;
+            border-top-right-radius: 2.5em;
+        }
+
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding: 5vh 1vw 3vh;
+            border-bottom-left-radius: 2.5em;
+            border-bottom-right-radius: 2.5em;
+            background: $secondary-color;
+        }
+    }
+
+    .illustration-cta {
+
+        width: 100%;
+
+        img {
+            width: 100%
+        }
     }
 }
 
