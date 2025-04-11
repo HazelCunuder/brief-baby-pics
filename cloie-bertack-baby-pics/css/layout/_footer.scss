@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography';
+
+footer {
+    font-family: typography.$font-body;
+    background: $main-color;
+    width: 100%;
+    padding: 2vh 0vh 0vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    .logo {
+        margin: 0vh 0vw 0vh 5vw;
+        grid-row: span 3;
+
+        img {
+            max-width: 480px;
+            max-height: 180px;
+            object-fit: cover;
+            padding-right: 5vw;
+            border-right: thin solid;
+        }
+    }
+
+    .social-media {
+
+        margin-right : 4vw;
+        grid-row-start: 2;
+        grid-column-start: 2;
+
+        img {
+            max-height: 50px;
+        }
+
+        b {
+            font-size: 1.25em;
+        }
+
+        a {
+            margin-right: 5%;
+        }
+
+    }
+
+    .contact {
+        grid-row-start: 2;
+        grid-column-start: 3;
+
+
+        b {
+            font-size: 1.25em;
+        }
+    }
+
+    #copyrights {
+        grid-column: span 3;
+        background: $secondary-color;
+        display: flex;
+        justify-content: center;
+        padding: 2vh 0vh
+    }
+
+}
+
+
