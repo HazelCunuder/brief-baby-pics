@@ -1,0 +1,34 @@
+/* Fonts to use in the site*/
+
+$font-heading: "Dancing Script", cursive;
+$font-subheading: "Sarala", sans-serif;
+$font-body: "Cagliostro", sans-serif;
+
+/* Weights for the text */
+
+$bold: 700;
+$normal: 400;
+
+/* Font sizes for text */
+
+h1 {
+    font-family: $font-heading;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: $font-subheading;
+    font-size: 1.5em;
+}
+
+p {
+    font-family: $font-body;
+}
+
+a {
+    font-family: $font-subheading;
+}
+
+strong {
+    font-family: $font-subheading;
+}
