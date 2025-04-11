@@ -1,0 +1,203 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Main Site colors*/
+/* Fonts to use in the site*/
+/* Weights for the text */
+/* Font sizes for text */
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Sarala", sans-serif;
+  font-size: 1.5em;
+}
+
+p {
+  font-family: "Cagliostro", sans-serif;
+}
+
+a {
+  font-family: "Sarala", sans-serif;
+}
+
+strong {
+  font-family: "Sarala", sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Sarala", sans-serif;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background: #DBB4BB;
+  margin: 0%;
+}
+header .logo img {
+  width: 25%;
+  max-height: 180px;
+  object-fit: cover;
+}
+header nav {
+  background: #ffD0C7;
+  padding: 0%;
+  margin: 0%;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0% 1.5%;
+  margin: 0%;
+}
+header nav li {
+  padding: 1% 4%;
+  margin: 0%;
+}
+header nav li a {
+  text-decoration: none;
+}
+
+footer {
+  font-family: "Cagliostro", sans-serif;
+  background: #DBB4BB;
+  width: 100%;
+  padding: 2vh 0vh 0vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+footer .logo {
+  margin: 0vh 0vw 0vh 5vw;
+  grid-row: span 3;
+}
+footer .logo img {
+  max-width: 480px;
+  max-height: 180px;
+  object-fit: cover;
+  padding-right: 5vw;
+  border-right: thin solid;
+}
+footer .social-media {
+  margin-right: 4vw;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+footer .social-media img {
+  max-height: 50px;
+}
+footer .social-media b {
+  font-size: 1.25em;
+}
+footer .social-media a {
+  margin-right: 5%;
+}
+footer .contact {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+footer .contact b {
+  font-size: 1.25em;
+}
+footer #copyrights {
+  grid-column: span 3;
+  background: #ffD0C7;
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0vh;
+}
+
+#cta a {
+  background: #ffD0C7;
+  display: block;
+  margin-top: 2%;
+  padding: 0.4% 1%;
+  text-decoration: none;
+  text-align: center;
+  text-anchor: middle;
+  text-transform: uppercase;
+  border-radius: 1em;
+}
+
+#cta {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 0% 100%;
+}
+#cta h1 {
+  visibility: hidden;
+  grid-column: span 2;
+  justify-self: center;
+  margin: -15vh;
+}
+#cta .cta {
+  background: #DBB4BB;
+  align-content: right;
+  padding: 15%;
+}
+#cta .cta h2 {
+  text-align: center;
+  background: #ffD0C7;
+  padding-top: 3vh;
+  border-top-left-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+}
+#cta .cta p {
+  text-align: justify;
+  text-align-last: center;
+  padding: 5vh 1vw 3vh;
+  border-bottom-left-radius: 2.5em;
+  border-bottom-right-radius: 2.5em;
+  background: #ffD0C7;
+}
+#cta .illustration-cta {
+  width: 100%;
+}
+#cta .illustration-cta img {
+  width: 100%;
+  height: 100%;
+}
+
+#presentation {
+  display: block;
+  background: #ffD0C7;
+  padding: 2.5%;
+}
+#presentation h2 {
+  text-align: center;
+  padding: 0vh 4vw 5vh;
+}
+#presentation p {
+  text-align: justify;
+  text-align-last: center;
+  padding: 5vh 4vw 0vh;
+}
+
+#service-accueil article {
+  width: 100%;
+}
+#service-accueil img {
+  width: 50vw;
+}
+
+#reviews {
+  width: 100%;
+}
+#reviews img {
+  width: 33%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
