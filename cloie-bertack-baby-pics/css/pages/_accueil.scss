@@ -44,8 +44,26 @@
         width: 100%;
 
         img {
-            width: 100%
+            width: 100%;
+            height: 100%;
         }
+    }
+}
+
+#presentation {
+    display: block;
+    background: $secondary-color;
+    padding: 2.5%;
+
+    h2 {
+        text-align: center;
+        padding: 0vh 4vw 5vh;
+    }
+
+    p {
+        text-align: justify;
+        text-align-last: center;
+        padding: 5vh 4vw 0vh;
     }
 }
 
