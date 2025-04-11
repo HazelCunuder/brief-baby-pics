@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+
+#cta {
+    a{
+        background: $secondary-color;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        text-align: center;
+        text-anchor: middle;
+        text-transform: uppercase;
+        border-radius: 1em;
+    }
+}
