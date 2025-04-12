@@ -70,19 +70,48 @@
 #service-accueil {
     
     article {
-        width: 100%
-    }
-    
-    img {
-        width: 50vw;
+        width: 100%;
+        display: flex;
+
+        figure {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 
+    .presta-1 {
+        background-color: $main-color;
+    }
+
+    .presta-2 {
+        background: $secondary-color;
+    }
+
+    .presta-3 {
+        background: $main-color;
+    }
 }
 
 #reviews {
     width: 100%;
+    background-color: $secondary-color;
 
-    img {
-        width: 33%;
+    h2 {
+        text-align: center;
+        padding: 5vh 0vw
+    }
+
+    .reviews {
+        display: flex;
+        justify-content: space-around;
+        max-height: 400px;
+
+        img {
+            width: 33%;
+            object-fit: cover;
+        }
     }
 }

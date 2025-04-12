@@ -10,23 +10,28 @@
 h1 {
   font-family: "Dancing Script", cursive;
   font-size: 3em;
+  color: black;
 }
 
 h2 {
   font-family: "Sarala", sans-serif;
   font-size: 1.5em;
+  color: black;
 }
 
 p {
   font-family: "Cagliostro", sans-serif;
+  color: black;
 }
 
 a {
   font-family: "Sarala", sans-serif;
+  color: black;
 }
 
 strong {
   font-family: "Sarala", sans-serif;
+  color: black;
 }
 
 header {
@@ -184,16 +189,40 @@ footer #copyrights {
 
 #service-accueil article {
   width: 100%;
+  display: flex;
 }
-#service-accueil img {
-  width: 50vw;
+#service-accueil article figure {
+  width: 50%;
+}
+#service-accueil article figure img {
+  width: 100%;
+}
+#service-accueil .presta-1 {
+  background-color: #DBB4BB;
+}
+#service-accueil .presta-2 {
+  background: #ffD0C7;
+}
+#service-accueil .presta-3 {
+  background: #DBB4BB;
 }
 
 #reviews {
   width: 100%;
+  background-color: #ffD0C7;
 }
-#reviews img {
+#reviews h2 {
+  text-align: center;
+  padding: 5vh 0vw;
+}
+#reviews .reviews {
+  display: flex;
+  justify-content: space-around;
+  max-height: 400px;
+}
+#reviews .reviews img {
   width: 33%;
+  object-fit: cover;
 }
 
 html {
