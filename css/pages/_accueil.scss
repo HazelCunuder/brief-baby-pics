@@ -23,7 +23,6 @@
 
         h2 {
             text-align: center;
-            background: $secondary-color;
             padding-top: 3vh;
             border-top-left-radius: 2.5em;
             border-top-right-radius: 2.5em;
@@ -35,7 +34,6 @@
             padding: 5vh 1vw 3vh;
             border-bottom-left-radius: 2.5em;
             border-bottom-right-radius: 2.5em;
-            background: $secondary-color;
         }
     }
 
@@ -60,7 +58,6 @@
         padding: 5vh 4vw 5vh;
         border-top-left-radius: 2.5em;
         border-top-right-radius: 2.5em;
-        background: $accent-color;
     }
 
     p {
@@ -69,7 +66,6 @@
         padding: 5vh 4vw 5vh;
         border-bottom-left-radius: 2.5em;
         border-bottom-right-radius: 2.5em;
-        background: $accent-color;
     }
 }
 
