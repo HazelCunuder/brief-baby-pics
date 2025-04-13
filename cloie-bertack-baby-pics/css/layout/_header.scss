@@ -30,6 +30,7 @@ header {
 
         ul{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             list-style-type: none;
             padding: 0% 1.5%;
@@ -44,7 +45,16 @@ header {
             a {
                 text-decoration: none;
             }
-
         }
+
+        li:hover {
+            background-color: variables.$accent-color;
+
+            a {
+                background-color: inherit;
+            }
+        }
+
+
     }
 }
