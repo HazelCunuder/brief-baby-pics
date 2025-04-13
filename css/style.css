@@ -144,6 +144,8 @@ footer #copyrights {
   text-anchor: middle;
   text-transform: uppercase;
   border-radius: 1em;
+  width: 20vw;
+  margin: auto;
 }
 
 #cta {
@@ -164,7 +166,6 @@ footer #copyrights {
 }
 #cta .cta h2 {
   text-align: center;
-  background: #ffD0C7;
   padding-top: 3vh;
   border-top-left-radius: 2.5em;
   border-top-right-radius: 2.5em;
@@ -175,7 +176,6 @@ footer #copyrights {
   padding: 5vh 1vw 3vh;
   border-bottom-left-radius: 2.5em;
   border-bottom-right-radius: 2.5em;
-  background: #ffD0C7;
 }
 #cta .illustration-cta {
   width: 100%;
@@ -195,7 +195,6 @@ footer #copyrights {
   padding: 5vh 4vw 5vh;
   border-top-left-radius: 2.5em;
   border-top-right-radius: 2.5em;
-  background: #EAA3C2;
 }
 #presentation p {
   text-align: justify;
@@ -203,7 +202,6 @@ footer #copyrights {
   padding: 5vh 4vw 5vh;
   border-bottom-left-radius: 2.5em;
   border-bottom-right-radius: 2.5em;
-  background: #EAA3C2;
 }
 
 #service-accueil h2 {
