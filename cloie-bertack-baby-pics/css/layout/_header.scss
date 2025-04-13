@@ -45,7 +45,16 @@ header {
             a {
                 text-decoration: none;
             }
-
         }
+
+        li:hover {
+            background-color: variables.$accent-color;
+
+            a {
+                background-color: inherit;
+            }
+        }
+
+
     }
 }
