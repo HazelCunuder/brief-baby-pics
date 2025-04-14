@@ -1,0 +1,58 @@
+@use '../base/typography';
+@use '../abstracts/variables' as *;
+@use '../components/buttons';
+
+h1 {
+    text-align: center;
+    padding: 5vh 0vw 3vh;
+}
+
+#about-me {
+    background: $main-color;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    padding: 5vh 0vw;
+
+    img {
+        grid-row: span 2;
+        justify-self: center;
+        width: 30vw;
+        height: 30vw;
+        max-width: 350px;
+        max-height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    h2 {
+        justify-self: start;
+        align-self: end;
+        margin-bottom: 5%;
+    }
+
+    p {
+        padding-right: 50vw;
+    }
+}
+
+#equipement {
+    background-color: $secondary-color;
+
+    h2 {
+        padding: 5vh 10% 3vh 5vw;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 33% 33% 33%;
+        list-style: none;
+        padding: 3vh 5vw;
+
+        li {
+            padding: 2vh 0vw;
+        }
+    }
+}
