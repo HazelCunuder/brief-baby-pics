@@ -3,9 +3,11 @@
 @use 'base/typography';
 @use 'layout/header';
 @use 'layout/footer';
+@use 'layout/grid';
 @use 'components/buttons';
 @use 'pages/accueil';
 @use 'pages/studio';
+@use 'pages/gallerie';
 
 html {
     overflow-x: hidden;
