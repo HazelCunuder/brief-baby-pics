@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography';
+
+#g-intro {
+
+    display: flex;
+    flex-direction: column;
+    background-color: $accent-color;
+    
+
+    h1 {
+        align-self: center;
+        padding-top: 5vh;
+    }
+
+    p {
+        text-align: justify;
+        text-align-last: center;
+        padding: 3vh 15vw 5vh;
+    }
+
+}
