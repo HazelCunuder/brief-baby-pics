@@ -401,6 +401,68 @@ footer #copyrights {
   background-color: #ffD0C7;
 }
 
+#contact-form {
+  background-color: #EAA3C2;
+  padding: 5vh 5vw;
+  border-radius: 1.6em;
+  max-width: 80vw;
+  margin: 3vh auto;
+}
+#contact-form h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+#contact-form form label {
+  font-weight: 700;
+  font-family: "Sarala", sans-serif;
+  color: rgb(166.2162162162, 79.7837837838, 95.2972972973);
+  margin-bottom: 0.2rem;
+}
+#contact-form form input,
+#contact-form form textarea {
+  font-family: "Cagliostro", sans-serif;
+  padding: 0.75rem 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+#contact-form form input:focus,
+#contact-form form textarea:focus {
+  outline: none;
+  border-color: #EAA3C2;
+  box-shadow: 0 0 0 3px rgba(234, 163, 194, 0.2);
+}
+#contact-form form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+#contact-form form .send-button {
+  text-align: center;
+}
+#contact-form form .send-button input[type=submit] {
+  background-color: #DBB4BB;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Sarala", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#contact-form form .send-button input[type=submit]:hover {
+  background-color: rgb(224.5221238938, 121.4778761062, 166.4690265487);
+}
+
 html {
   overflow-x: hidden;
 }
