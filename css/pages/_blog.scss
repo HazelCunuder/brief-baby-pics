@@ -1,0 +1,25 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+#blog {
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+
+    h1 {
+        grid-column: span 2;
+        text-align: center;
+        padding: 5vh 0vw 3vh;
+    }
+
+    article {
+        @include mixins.blog-article;
+        background: variables.$main-color;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
