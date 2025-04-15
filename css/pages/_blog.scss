@@ -22,4 +22,24 @@
         }
     }
 
+    aside {
+        @include mixins.aside;
+
+        article {
+
+            h3 {
+                padding-top: 2vh;
+            }
+
+            img {
+                width: 10%;
+                width: 50vw;
+                height: 30vw;
+                max-width: 420px;
+                max-height: 160px;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    }
 }
