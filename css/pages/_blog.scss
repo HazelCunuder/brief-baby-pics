@@ -1,0 +1,53 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+#blog {
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+
+    h1 {
+        grid-column: span 2;
+        text-align: center;
+        padding: 5vh 0vw 3vh;
+    }
+
+    article {
+        @include mixins.blog-article;
+        background: variables.$main-color;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    aside {
+        @include mixins.aside;
+
+        article {
+
+            h3 {
+                padding-top: 2vh;
+            }
+
+            img {
+                width: 10%;
+                width: 50vw;
+                height: 30vw;
+                max-width: 420px;
+                max-height: 160px;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.blog-nav {
+    margin: 0vh 1vw;
+    padding: 3vh 0vw;
+    display: flex;
+    width: 58%;
+    justify-content: space-between;
+}

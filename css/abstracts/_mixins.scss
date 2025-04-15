@@ -1,0 +1,28 @@
+@use './variables';
+
+@mixin blog-article {
+    margin: 0vh 1vw;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 3vw 2vh;
+    text-align: justify;
+    text-align-last: left;
+
+    p {
+        padding: 3vh 0vw;
+    }
+
+    h2 {
+        padding-top: 2vh;
+    }
+}
+
+@mixin aside {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 0vw;
+    justify-content: space-between;
+    width: 30vw;
+    align-content: end;
+}
