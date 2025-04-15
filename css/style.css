@@ -401,6 +401,53 @@ footer #copyrights {
   background-color: #ffD0C7;
 }
 
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 3vh 5vw;
+  list-style: none;
+}
+.services-list > li {
+  background-color: #EAA3C2;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(219, 180, 187, 0.15);
+  font-family: "Sarala", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.services-list > li > ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.services-list > li > ul > li {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.services-list > li > ul > li:nth-child(2) {
+  font-weight: 700;
+  color: #EAA3C2;
+}
+.services-list > li > ul + ul {
+  margin-top: 0.5rem;
+}
+
 h1 {
   text-align: center;
   padding: 5vh 0vw 3vh;
