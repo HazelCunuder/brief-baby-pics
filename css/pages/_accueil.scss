@@ -62,26 +62,26 @@
     }
   }
 
-#presentation {
+  #presentation {
     display: block;
     background: $secondary-color;
-    padding: 2.5% 10%;
-
-    h2 {
-        text-align: center;
-        padding: 5vh 4vw 5vh;
-        border-top-left-radius: 2.5em;
-        border-top-right-radius: 2.5em;
+    padding: 5%;
+  
+    h2, p {
+      text-align: justify;
+      text-align-last: center;
+      padding: 3vh 2vw;
+      border-radius: 2.5em;
     }
-
-    p {
-        text-align: justify;
-        text-align-last: center;
-        padding: 5vh 4vw 5vh;
-        border-bottom-left-radius: 2.5em;
-        border-bottom-right-radius: 2.5em;
+  
+    @media (min-width: 768px) {
+      padding: 2.5% 10%;
+  
+      h2, p {
+        padding: 2vh 1vw;
+      }
     }
-}
+  }
 
 #service-accueil {
 
