@@ -181,87 +181,104 @@ footer #copyrights {
 
 #cta {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 0% 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
 }
 #cta h1 {
   visibility: hidden;
-  grid-column: span 2;
+  grid-column: span 1;
   justify-self: center;
   margin: -15vh;
 }
 #cta .cta {
   background: #DBB4BB;
-  align-content: right;
-  padding: 15%;
+  padding: 10%;
 }
 #cta .cta h2 {
   text-align: center;
-  padding-top: 3vh;
-  border-top-left-radius: 2.5em;
-  border-top-right-radius: 2.5em;
+  padding-top: 1vh;
 }
 #cta .cta p {
   text-align: justify;
   text-align-last: center;
-  padding: 5vh 1vw 3vh;
+  padding: 3vh 2vw 3vh;
   border-bottom-left-radius: 2.5em;
   border-bottom-right-radius: 2.5em;
 }
 #cta .illustration-cta {
   width: 100%;
+  height: 100%;
 }
 #cta .illustration-cta img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  #cta {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0% 100%;
+  }
+  #cta h1 {
+    grid-column: span 2;
+    margin: -15vh;
+  }
+  #cta .cta {
+    padding: 15%;
+  }
+  #cta .illustration-cta img {
+    height: 100%;
+  }
 }
 
 #presentation {
   display: block;
   background: #ffD0C7;
-  padding: 2.5% 10%;
+  padding: 5%;
 }
-#presentation h2 {
-  text-align: center;
-  padding: 5vh 4vw 5vh;
-  border-top-left-radius: 2.5em;
-  border-top-right-radius: 2.5em;
-}
-#presentation p {
+#presentation h2, #presentation p {
   text-align: justify;
   text-align-last: center;
-  padding: 5vh 4vw 5vh;
-  border-bottom-left-radius: 2.5em;
-  border-bottom-right-radius: 2.5em;
+  padding: 3vh 2vw;
+  border-radius: 2.5em;
+}
+@media (min-width: 768px) {
+  #presentation {
+    padding: 2.5% 10%;
+  }
+  #presentation h2, #presentation p {
+    padding: 2vh 1vw;
+  }
 }
 
 #service-accueil h2 {
   text-align: center;
   padding: 3vh;
-  border-top-left-radius: 2.5em;
-  border-top-right-radius: 2.5em;
+  border-radius: 2.5em 2.5em 0 0;
 }
 #service-accueil article {
   width: 100%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
   grid-template-rows: auto;
 }
 #service-accueil article figure {
   width: 100%;
-  grid-row: span 2;
+  height: 100%;
+  grid-row: auto;
 }
 #service-accueil article figure img {
-  object-fit: fill;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
 #service-accueil article h3 {
   justify-self: center;
   align-self: end;
+  padding-top: 2vh;
 }
 #service-accueil article p {
-  padding: 3vh 15vw;
+  padding: 2vh 5vw;
 }
 #service-accueil .presta-1 {
   background-color: #DBB4BB;
@@ -270,11 +287,27 @@ footer #copyrights {
   background: #ffD0C7;
 }
 #service-accueil .presta-2 figure {
-  grid-column-start: 2;
-  grid-row-end: 2;
+  grid-column: span 1;
+  grid-row: span 2;
+  height: 100%;
 }
 #service-accueil .presta-3 {
   background: #DBB4BB;
+}
+@media (min-width: 768px) {
+  #service-accueil article {
+    grid-template-columns: 50% 50%;
+  }
+  #service-accueil article figure {
+    grid-row: span 2;
+  }
+  #service-accueil article p {
+    padding: 3vh 15vw;
+  }
+  #service-accueil .presta-2 figure {
+    grid-column-start: 2;
+    grid-row-end: 2;
+  }
 }
 
 #reviews {
@@ -283,16 +316,48 @@ footer #copyrights {
 }
 #reviews h2 {
   text-align: center;
-  padding: 5vh 0vw;
+  padding-top: 3vh;
 }
 #reviews .reviews {
   display: flex;
-  justify-content: space-around;
-  max-height: 400px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
 }
 #reviews .reviews img {
-  width: 33%;
+  flex: 0 0 80%;
+  max-width: 80%;
   object-fit: cover;
+  border-radius: 1em;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  max-height: 160px;
+  object-fit: cover;
+}
+#reviews .reviews img:active {
+  transform: scale(0.98);
+}
+@media (min-width: 768px) {
+  #reviews h2 {
+    padding-top: 4vh;
+  }
+  #reviews .reviews {
+    flex-wrap: wrap;
+    overflow: visible;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+  }
+  #reviews .reviews img {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 0;
+    scroll-snap-align: none;
+    max-height: 300px;
+  }
 }
 
 #intro {
