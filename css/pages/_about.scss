@@ -2,57 +2,181 @@
 @use '../abstracts/variables' as *;
 @use '../components/buttons';
 
-h1 {
-    text-align: center;
-    padding: 5vh 0vw 3vh;
+h1.about {
+    padding: 5vh;
 }
 
 #about-me {
     background: $main-color;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    padding: 5vh 0vw;
-
+    padding: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
     img {
+      width: 60vw;
+      height: 60vw;
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+  
+    h2 {
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      max-width: 90%;
+    }
+  
+    // Tablet and up
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: auto;
+      align-items: center;
+      text-align: left;
+  
+      img {
         grid-row: span 2;
         justify-self: center;
         width: 30vw;
         height: 30vw;
         max-width: 350px;
         max-height: 350px;
-        border-radius: 50%;
-        object-fit: cover;
-        overflow: hidden;
-    }
-
-    h2 {
+        margin-bottom: 0;
+      }
+  
+      h2 {
         justify-self: start;
         align-self: end;
-        margin-bottom: 5%;
+      }
+  
+      p {
+        padding-right: 5vw;
+        max-width: 30%;
+        text-align: justify;
+        align-self: start;
+      }
     }
+  }
 
-    p {
-        padding-right: 50vw;
-    }
-}
-
-#equipement {
+#experiencee {
     background-color: $secondary-color;
-
-    h2 {
-        padding: 5vh 10% 3vh 5vw;
+    padding: 2rem 1rem 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+    // Central vertical line for mobile
+    &::before {
+      content: '';
+      position: absolute;
+      top: 6rem;
+      left: 20px;
+      width: 4px;
+      height: calc(95% - 6rem);
+      background-color: $main-color;
+      z-index: 0;
     }
-
-    ul {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 33% 33% 33%;
-        list-style: none;
-        padding: 3vh 5vw;
-
-        li {
-            padding: 2vh 0vw;
+  
+    h2 {
+      text-align: center;
+      align-self: center;
+      margin-bottom: 3vh;
+      position: relative;
+      z-index: 1;
+    }
+  
+    // Shared styles for timeline blocks
+    .tl-left,
+    .tl-right {
+      background-color: white;
+      padding: 1.5em;
+      border-radius: 2.5em;
+      text-align: justify;
+      margin: 2rem;
+  
+      h3 {
+        padding-bottom: 1vh;
+      }
+    }
+  
+    // Desktop styles
+    @media (min-width: 768px) {
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+      .tl-left {
+        max-width: 40vw;
+        align-self: flex-start;
+        margin-left: auto;
+        margin-right: 60rem;
+  
+        &::before {
+          left: auto;
+          right: -36px;
         }
+      }
+  
+      .tl-right {
+        max-width: 40vw;
+        align-self: flex-end;
+        margin-right: auto;
+        margin-left: 60rem;
+  
+        &::before {
+          left: -36px;
+        }
+      }
     }
 }
+
+#valeurs {
+    background-color: $accent-color;
+    padding: 4vh 5vw;
+    display: flex;
+    flex-direction: column;
+  
+    h2 {
+      text-align: center;
+      padding-bottom: 3vh;
+    }
+  
+    blockquote {
+      background-color: $secondary-color;
+      display: block;
+      width: 80%;
+      text-align: center;
+      align-self: center;
+      padding: 2em;
+      border-radius: 2.5em;
+      font-family: typography.$font-subheading;
+      font-size: typography.$normal;
+  
+      b {
+        font-size: 1.8em;
+        font-family: typography.$font-heading;
+        padding: 0vh 1vw;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      blockquote {
+        width: 70%;
+      }
+    }
+  
+    @media (min-width: 1024px) {
+      blockquote {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }

@@ -10,7 +10,7 @@
     h1 {
         grid-column: span 2;
         text-align: center;
-        padding: 5vh 0vw 3vh;
+        padding: 5vh 0vw 5vh;
     }
 
     article {
@@ -45,9 +45,9 @@
 }
 
 .blog-nav {
-    margin: 0vh 1vw;
+    margin-left: 3vw;
     padding: 3vh 0vw;
     display: flex;
-    width: 58%;
+    width: 57%;
     justify-content: space-between;
 }
