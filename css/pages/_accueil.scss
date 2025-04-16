@@ -158,23 +158,58 @@
   }
   
 
-#reviews {
+  #reviews {
     width: 100%;
     background-color: $secondary-color;
-
+  
     h2 {
-        text-align: center;
-        padding: 5vh 0vw
+      text-align: center;
+      padding-top: 3vh;
     }
-
+  
     .reviews {
-        display: flex;
-        justify-content: space-around;
-        max-height: 400px;
-
-        img {
-            width: 33%;
-            object-fit: cover;
-        }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 1rem;
+  
+      img {
+        flex: 0 0 80%;
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 1em;
+        scroll-snap-align: start;
+        transition: transform 0.3s ease;
+        max-height: 160px;
+        object-fit: cover;
+      }
+  
+      img:active {
+        transform: scale(0.98);
+      }
     }
-}
+  
+    @media (min-width: 768px) {
+    h2 {
+        padding-top: 4vh;
+    }  
+    .reviews {
+        flex-wrap: wrap;
+        overflow: visible;
+        justify-content: space-around;
+        padding: 2rem 1rem;
+  
+        img {
+          flex: 0 0 30%;
+          max-width: 30%;
+          margin-bottom: 0;
+          scroll-snap-align: none;
+          max-height: 300px;
+        }
+      }
+    }
+  }
