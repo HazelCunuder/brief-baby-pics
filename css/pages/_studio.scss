@@ -58,49 +58,56 @@
 }
 
 #garanties {
-    
     background-color: $accent-color;
-    padding: 3vh 0vw;
-
+    padding: 3vh 5vw;
+  
     h2 {
-        display: block;
-        text-align: center;
-        padding: 0vh 0vw 3vh;
+      text-align: center;
+      padding-bottom: 3vh;
     }
-
+  
     .prestas {
-        list-style: none;
-        padding: 0vh 5vw;
-        margin: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-    
-        > li {
-          background: lighten($accent-color, 15%);
-          padding: 1rem;
-          border-radius: 12px;
-          box-shadow: inset 0 0 0 1px darken($accent-color, 10%);
-          color: darken($main-color, 25%);
-          font-weight: typography.$bold;
-          text-align: center;
-          font-family: typography.$font-subheading;
-    
-          ul {
-            margin-top: 0.5rem;
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-    
-            li {
-              margin-bottom: 0.25rem;
-              font-weight: typography.$bold;
-              text-align: center;
-            }
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  
+      > li {
+        background: $secondary-color;
+        padding: 1rem;
+        border-radius: 12px;
+        font-weight: typography.$bold;
+        text-align: center;
+        font-family: typography.$font-subheading;
+  
+        ul {
+          margin-top: 0.5rem;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+  
+          li {
+            font-weight: typography.$bold;
           }
         }
+      }
     }
-}
+  
+    @media (min-width: 768px) {
+      .prestas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+  
+      .prestas > li ul {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
 
 #direction {
     background-color: $secondary-color;
