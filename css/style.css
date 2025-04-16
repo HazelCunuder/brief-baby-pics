@@ -151,17 +151,31 @@ footer #copyrights {
 }
 
 #cta a {
-  background: #ffD0C7;
+  background: darkslateblue;
   display: block;
-  margin-top: 2%;
-  padding: 0.4% 1%;
+  margin: 2vh auto 0;
+  padding: 1em 2em;
   text-decoration: none;
   text-align: center;
-  text-anchor: middle;
   text-transform: uppercase;
+  color: #EAA3C2;
   border-radius: 1em;
-  width: 20vw;
-  margin: auto;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  width: fit-content;
+  min-width: 40vw;
+  max-width: 80vw;
+  transition: all 0.3s ease;
+}
+#cta a:hover, #cta a:focus {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+@media (min-width: 768px) {
+  #cta a {
+    min-width: 20vw;
+    font-size: 1rem;
+    padding: 0.8em 2em;
+  }
 }
 
 #cta {
@@ -313,16 +327,16 @@ footer #copyrights {
   height: 100%;
 }
 
-#liste-services {
+#garanties {
   background-color: #EAA3C2;
   padding: 3vh 0vw;
 }
-#liste-services h2 {
+#garanties h2 {
   display: block;
   text-align: center;
   padding: 0vh 0vw 3vh;
 }
-#liste-services .prestas {
+#garanties .prestas {
   list-style: none;
   padding: 0vh 5vw;
   margin: 0;
@@ -330,7 +344,7 @@ footer #copyrights {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
-#liste-services .prestas > li {
+#garanties .prestas > li {
   background: rgb(248.2168141593, 225.2831858407, 235.296460177);
   padding: 1rem;
   border-radius: 12px;
@@ -340,13 +354,13 @@ footer #copyrights {
   text-align: center;
   font-family: "Sarala", sans-serif;
 }
-#liste-services .prestas > li ul {
+#garanties .prestas > li ul {
   margin-top: 0.5rem;
   list-style-type: none;
   display: flex;
   justify-content: space-around;
 }
-#liste-services .prestas > li ul li {
+#garanties .prestas > li ul li {
   margin-bottom: 0.25rem;
   font-weight: 700;
   text-align: center;
@@ -451,50 +465,160 @@ footer #copyrights {
 h1 {
   text-align: center;
   padding: 5vh 0vw 3vh;
+  background: #DBB4BB;
 }
 
 #about-me {
   background: #DBB4BB;
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: auto;
-  padding: 5vh 0vw;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 #about-me img {
-  grid-row: span 2;
-  justify-self: center;
-  width: 30vw;
-  height: 30vw;
-  max-width: 350px;
-  max-height: 350px;
+  width: 60vw;
+  height: 60vw;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 50%;
   object-fit: cover;
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 #about-me h2 {
-  justify-self: start;
-  align-self: end;
-  margin-bottom: 5%;
+  margin-bottom: 1rem;
 }
 #about-me p {
-  padding-right: 50vw;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  #about-me {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    align-items: center;
+    text-align: left;
+  }
+  #about-me img {
+    grid-row: span 2;
+    justify-self: center;
+    width: 30vw;
+    height: 30vw;
+    max-width: 350px;
+    max-height: 350px;
+    margin-bottom: 0;
+  }
+  #about-me h2 {
+    justify-self: start;
+    align-self: end;
+  }
+  #about-me p {
+    padding-right: 5vw;
+    max-width: 30%;
+    text-align: justify;
+    align-self: start;
+  }
 }
 
-#equipement {
+#experiencee {
   background-color: #ffD0C7;
+  padding: 2rem 1rem 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-#equipement h2 {
-  padding: 5vh 10% 3vh 5vw;
+#experiencee::before {
+  content: "";
+  position: absolute;
+  top: 6rem;
+  left: 20px;
+  width: 4px;
+  height: calc(95% - 6rem);
+  background-color: #DBB4BB;
+  z-index: 0;
 }
-#equipement ul {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 33% 33% 33%;
-  list-style: none;
-  padding: 3vh 5vw;
+#experiencee h2 {
+  text-align: center;
+  align-self: center;
+  margin-bottom: 3vh;
+  position: relative;
+  z-index: 1;
 }
-#equipement ul li {
-  padding: 2vh 0vw;
+#experiencee .tl-left,
+#experiencee .tl-right {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 2.5em;
+  text-align: justify;
+  margin: 2rem;
+}
+#experiencee .tl-left h3,
+#experiencee .tl-right h3 {
+  padding-bottom: 1vh;
+}
+@media (min-width: 768px) {
+  #experiencee::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #experiencee .tl-left {
+    max-width: 40vw;
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: 60rem;
+  }
+  #experiencee .tl-left::before {
+    left: auto;
+    right: -36px;
+  }
+  #experiencee .tl-right {
+    max-width: 40vw;
+    align-self: flex-end;
+    margin-right: auto;
+    margin-left: 60rem;
+  }
+  #experiencee .tl-right::before {
+    left: -36px;
+  }
+}
+
+#valeurs {
+  background-color: #EAA3C2;
+  padding: 4vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+#valeurs h2 {
+  text-align: center;
+  padding-bottom: 3vh;
+}
+#valeurs blockquote {
+  background-color: #ffD0C7;
+  display: block;
+  width: 80%;
+  text-align: center;
+  align-self: center;
+  padding: 2em;
+  border-radius: 2.5em;
+  font-family: "Sarala", sans-serif;
+  font-size: 400;
+}
+#valeurs blockquote b {
+  font-size: 1.8em;
+  font-family: "Dancing Script", cursive;
+  padding: 0vh 1vw;
+}
+@media (min-width: 768px) {
+  #valeurs blockquote {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  #valeurs blockquote {
+    width: 50%;
+    text-align: center;
+  }
 }
 
 #contact-form {
