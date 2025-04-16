@@ -2,13 +2,14 @@
 
 #cta {
     a {
-      background: $secondary-color;
+      background: darkslateblue;
       display: block;
       margin: 2vh auto 0;
       padding: 1em 2em;
       text-decoration: none;
       text-align: center;
       text-transform: uppercase;
+      color: $accent-color;
       border-radius: 1em;
       font-size: clamp(0.9rem, 2.5vw, 1.1rem);
       width: fit-content;
@@ -18,7 +19,6 @@
   
       &:hover,
       &:focus {
-        background: darken($secondary-color, 10%);
         cursor: pointer;
         transform: scale(1.02);
       }
