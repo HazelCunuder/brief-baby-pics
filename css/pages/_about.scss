@@ -2,10 +2,8 @@
 @use '../abstracts/variables' as *;
 @use '../components/buttons';
 
-h1 {
-    text-align: center;
-    padding: 5vh 0vw 3vh;
-    background: $main-color;
+h1.about {
+    padding: 5vh;
 }
 
 #about-me {
