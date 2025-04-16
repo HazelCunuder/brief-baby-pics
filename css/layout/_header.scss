@@ -2,59 +2,80 @@
 @use '../base/typography';
 
 header {
-
     width: 100%;
     display: flex;
     flex-direction: column;
     font-family: typography.$font-subheading;
 
-    .logo {
+    a {
         display: flex;
         justify-content: center;
-        flex-wrap: nowrap;
         background: variables.$main-color;
-        margin: 0%;
-        
+        margin: 0;
+
         img {
-            width: 25%;
-            max-height: 180px;
+            width: 50%;
+            max-height: 120px;
             object-fit: cover;
         }
     }
 
     nav {
-
         background: variables.$secondary-color;
-        padding: 0%;
-        margin: 0%;
+        padding: 0;
+        margin: 0;
 
-        ul{
+        ul {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             list-style-type: none;
-            padding: 0% 1.5%;
-            margin: 0%;
+            padding: 0.5rem 0;
+            margin: 0;
+
+            li {
+                padding: 0.75rem 0;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        background: none;
+                    }
+
+                    &:hover {
+                    background-color: variables.$accent-color;
+                    }
+            }
         }
+    }
 
-        li {
+    // Desktop styles
+    @media (min-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: variables.$main-color;
 
-            padding: 1% 4%;
-            margin: 0%;
 
-            a {
-                text-decoration: none;
+        .logo {
+            img {
+                width: 100%;
+                max-height: 180px;
             }
         }
 
-        li:hover {
-            background-color: variables.$accent-color;
+        nav {
+            width: 100%;
 
-            a {
-                background-color: inherit;
+            ul {
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0%;
+
+                li {
+                    padding: 1rem 2rem;
+                }
             }
         }
-
-
     }
 }
