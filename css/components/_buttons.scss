@@ -9,7 +9,7 @@
       text-decoration: none;
       text-align: center;
       text-transform: uppercase;
-      color: $accent-color;
+      color: white;
       border-radius: 1em;
       font-size: clamp(0.9rem, 2.5vw, 1.1rem);
       width: fit-content;
@@ -27,8 +27,8 @@
     @media (min-width: 768px) {
       a {
         min-width: 20vw;
-        font-size: 1rem;
-        padding: 0.8em 2em;
+        font-size: 1.4rem;
+        margin-bottom: 0%;
       }
     }
   }

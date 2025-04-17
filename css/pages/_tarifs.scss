@@ -36,7 +36,6 @@
       font-family: typography.$font-heading;
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #5b2c3a;
     }
 
     section {
@@ -48,14 +47,12 @@
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
         font-family: typography.$font-subheading;
-        color: #4a2c2a;
       }
 
       p {
         margin: 0.25rem 0;
         font-family: typography.$font-subheading;
         font-size: typography.$normal;
-        color: #2d2d2d;
       }
     }
   }
@@ -69,6 +66,18 @@
   @media (min-width: 992px) {
     .tarifs-container {
       flex-direction: row; 
+    }
+
+    article {
+      h2 {
+        font-size: 3rem;
+      }
+
+      section {
+        h3 {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
