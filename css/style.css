@@ -114,49 +114,90 @@ footer {
   font-family: "Cagliostro", sans-serif;
   background: #DBB4BB;
   width: 100%;
-  padding: 2vh 0vh 0vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-}
-footer .logo {
-  margin: 0vh 0vw 0vh 5vw;
-  grid-row: span 3;
+  padding: 2vh 0 0vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
 }
 footer .logo img {
-  max-width: 480px;
-  max-height: 180px;
+  width: 70vw;
+  max-width: 320px;
   object-fit: cover;
-  padding-right: 5vw;
-  border-right: thin solid;
+  padding-right: 0;
+  border: none;
 }
 footer .social-media {
-  margin-right: 4vw;
-  grid-row-start: 2;
-  grid-column-start: 2;
-}
-footer .social-media img {
-  max-height: 50px;
+  text-align: center;
 }
 footer .social-media b {
   font-size: 1.25em;
 }
-footer .social-media a {
-  margin-right: 5%;
+footer .social-media .sm-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .social-media .sm-logo img {
+  min-width: 40px;
+  height: auto;
+  margin: 2vh 5vw;
 }
 footer .contact {
-  grid-row-start: 2;
-  grid-column-start: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
 footer .contact b {
   font-size: 1.25em;
 }
+footer .contact p {
+  align-self: start;
+  margin-top: 2vh;
+}
 footer #copyrights {
-  grid-column: span 3;
   background: #ffD0C7;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 2vh 0vh;
+  padding: 2vh 20vw;
+  font-size: 0.9em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+  }
+  footer .logo {
+    grid-row: span 3;
+    justify-self: center;
+  }
+  footer .social-media {
+    grid-row: 2;
+    grid-column: 2;
+    margin-left: 4vw;
+    text-align: left;
+    border-right: thin solid;
+  }
+  footer .social-media .sm-logo {
+    justify-content: flex-start;
+  }
+  footer .social-media .sm-logo img {
+    max-width: 60px;
+    margin: 2vh 2vw 2vh 0vw;
+  }
+  footer .contact {
+    grid-row: 2;
+    grid-column: 3;
+    text-align: left;
+  }
+  footer #copyrights {
+    grid-column: span 3;
+  }
 }
 
 .gallery {
