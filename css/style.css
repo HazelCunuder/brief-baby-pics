@@ -69,7 +69,7 @@ li {
 }
 @media (min-width: 728px) {
   li {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -321,47 +321,87 @@ footer #copyrights {
 }
 
 #garanties {
-  background-color: #EAA3C2;
-  padding: 3vh 5vw;
+  padding: 20px;
+  background-color: #ffD0C7;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 #garanties h2 {
   text-align: center;
-  padding-bottom: 3vh;
+  margin-bottom: 20px;
 }
 #garanties .prestas {
   list-style: none;
-  margin: 0;
   padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+#garanties .prestas li {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#garanties .prestas > li {
-  background: #ffD0C7;
-  padding: 1rem;
-  border-radius: 12px;
-  font-weight: 700;
-  text-align: center;
-  font-family: "Sarala", sans-serif;
+#garanties .prestas li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #EAA3C2;
 }
-#garanties .prestas > li ul {
-  margin-top: 0.5rem;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+#garanties .prestas li h3 {
+  color: #DBB4BB;
+  margin-bottom: 10px;
 }
-#garanties .prestas > li ul li {
-  font-weight: 700;
+#garanties .prestas li ul {
+  list-style: none;
+  padding-left: 20px;
+}
+#garanties .prestas li ul li {
+  color: rgba(0, 0, 0, 0.7);
+}
+#garanties .prestas li img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 250px;
+  width: 100%;
 }
 @media (min-width: 768px) {
-  #garanties .prestas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  #garanties #garanties {
+    padding: 30px;
   }
-  #garanties .prestas > li ul {
-    flex-direction: row;
-    justify-content: space-around;
+  #garanties .prestas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  #garanties .prestas li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  #garanties #garanties {
+    padding: 40px;
+  }
+  #garanties .prestas {
+    grid-template-columns: 50% 50%;
+  }
+  #garanties .prestas li {
+    width: 90%;
+  }
+  #garanties .prestas li li {
+    width: 100%;
+  }
+  #garanties .prestas li img {
+    width: 100%;
+    max-height: 400px;
   }
 }
 
