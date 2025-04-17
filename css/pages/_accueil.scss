@@ -45,15 +45,18 @@
   
     @media (min-width: 768px) {
       grid-template-columns: 50% 50%;
-      grid-template-rows: 0% 100%;
+      grid-template-rows: 0% 75vh;
   
       h1 {
         grid-column: span 2;
         margin: -15vh;
       }
-  
+
       .cta {
-        padding: 15%;
+        background: $main-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
   
       .illustration-cta img {
@@ -68,8 +71,7 @@
     padding: 5%;
   
     h2, p {
-      text-align: justify;
-      text-align-last: center;
+      text-align: center;
       padding: 3vh 2vw;
       border-radius: 2.5em;
     }
@@ -78,7 +80,7 @@
       padding: 2.5% 10%;
   
       h2, p {
-        padding: 2vh 1vw;
+        padding: 2vh 20vw;
       }
     }
   }
@@ -147,6 +149,8 @@
   
         p {
           padding: 3vh 15vw;
+          text-align: justify;
+          text-align-last: center;
         }
       }
   
@@ -161,6 +165,7 @@
   #reviews {
     width: 100%;
     background-color: $secondary-color;
+    overflow-x: hidden;
   
     h2 {
       text-align: center;
@@ -182,7 +187,7 @@
         max-width: 80%;
         object-fit: cover;
         border-radius: 1em;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
         transition: transform 0.3s ease;
         max-height: 160px;
         object-fit: cover;
@@ -208,7 +213,7 @@
           max-width: 30%;
           margin-bottom: 0;
           scroll-snap-align: none;
-          max-height: 300px;
+          max-height: 330px;
         }
       }
     }
