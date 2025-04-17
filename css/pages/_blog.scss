@@ -2,52 +2,67 @@
 @use '../abstracts/variables';
 
 #blog {
-
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto;
-
-    h1 {
-        grid-column: span 2;
-        text-align: center;
-        padding: 5vh 0vw 5vh;
-    }
-
-    article {
-        @include mixins.blog-article;
-        background: variables.$main-color;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    aside {
-        @include mixins.aside;
-
-        article {
-
-            h3 {
-                padding-top: 2vh;
-            }
-
-            img {
-                width: 10%;
-                width: 50vw;
-                height: 30vw;
-                max-width: 420px;
-                max-height: 160px;
-                object-fit: cover;
-                overflow: hidden;
-            }
-        }
-    }
-}
-
-.blog-nav {
-    margin-left: 3vw;
-    padding: 3vh 0vw;
     display: flex;
-    width: 57%;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 4vw;
+  
+    h1 {
+      text-align: center;
+      padding: 5vh 0;
+    }
+  
+    article {
+      @include mixins.blog-article;
+      background: variables.$main-color;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    aside {
+      @include mixins.aside;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2vw;
+      order: 2;
+    }
+
+    .blog-nav {
+        padding: 2vh 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5vh;
+    }
+  
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 0vw;
+  
+      h1 {
+        grid-column: span 2;
+      }
+  
+      aside {
+        grid-column: 2;
+        grid-row: 2;
+  
+        article {
+  
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .blog-nav {
+            flex-direction: row;
+            justify-content: space-between;
+            grid-row-start: 3;
+        }
+    }
 }
