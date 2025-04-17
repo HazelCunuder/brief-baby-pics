@@ -73,6 +73,9 @@
       grid-template-columns: 1fr 1fr;
       gap: 1.2rem 2vw;
 
+      label, input, textarea {
+        font-size: 1.6rem;
+      }
 
       label:nth-of-type(1) {
         grid-column: 1;
@@ -89,6 +92,12 @@
       textarea,
       .send-button {
         grid-column: span 2;
+      }
+
+      .send-button {
+        input[type="submit"] {
+          font-size: 2rem;
+        }
       }
     }
   }

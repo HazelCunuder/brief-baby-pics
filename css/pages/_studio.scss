@@ -48,6 +48,9 @@
       }
   
       .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 15%;
       }
   
@@ -163,6 +166,10 @@
         grid-row: span 2;
         align-self: center;
         text-align: left;
+
+        p{
+          padding: 2vh 0vw;
+        }
       }
     }
 }
