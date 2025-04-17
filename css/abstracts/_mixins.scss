@@ -3,7 +3,7 @@
 @mixin blog-article {
     display: flex;
     flex-direction: column;
-    padding: 3vh 4vw 1vh;
+    padding: 3vh 2vw 1vh;
     text-align: justify;
     text-align-last: left;
   
@@ -17,11 +17,50 @@
 }
 
 @mixin aside {
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0vh 0vw;
-    justify-content: space-between;
-    width: 30vw;
-    align-content: end;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    width: 100%;
+  
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2vh;
+  
+      img {
+        width: 100%;
+        max-width: 180px;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        margin-bottom: 2vh;
+      }
+      
+      &:nth-child(n+3) {
+        display: none;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30vw;
+      justify-self: center;
+      padding: 0vw;
+  
+      article {
+        margin-bottom: 0vh;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          max-height: 200px;
+        }
+
+        &:nth-child(n+3) {
+            display: flex;
+          }
+      }
+    }
+  }
