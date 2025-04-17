@@ -5,62 +5,65 @@ footer {
     font-family: typography.$font-body;
     background: $main-color;
     width: 100%;
-    padding: 2vh 0vh 0vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-
+    padding: 2vh 0 0vh;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  
     .logo {
-        margin: 0vh 0vw 0vh 5vw;
-        grid-row: span 3;
-
-        img {
-            max-width: 480px;
-            max-height: 180px;
-            object-fit: cover;
-            padding-right: 5vw;
-            border-right: thin solid;
-        }
+      img {
+        width: 70vw;
+        max-width: 320px;
+        object-fit: cover;
+        padding-right: 0;
+        border: none;
+      }
     }
 
     .social-media {
-
-        margin-right : 4vw;
-        grid-row-start: 2;
-        grid-column-start: 2;
-
-        img {
-            max-height: 50px;
-        }
-
+        text-align: center;
         b {
-            font-size: 1.25em;
+          font-size: 1.25em;
         }
 
-        a {
-            margin-right: 5%;
-        }
+        .sm-logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
 
+            img {
+                min-width: 40px;
+                height: auto;
+                margin: 2vh 5vw;
+            }
+        }
     }
-
+  
     .contact {
-        grid-row-start: 2;
-        grid-column-start: 3;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+      
+      b {
+        font-size: 1.25em;
+      }
 
-
-        b {
-            font-size: 1.25em;
-        }
+      p {
+        align-self: start;
+        margin-top: 2vh;
+      }
     }
-
+  
     #copyrights {
-        grid-column: span 3;
-        background: $secondary-color;
-        display: flex;
-        justify-content: center;
-        padding: 2vh 0vh
+      background: $secondary-color;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2vh 20vw;
+      font-size: 0.9em;
+      text-align: center;
     }
-
 }
-
-
