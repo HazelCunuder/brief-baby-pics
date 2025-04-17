@@ -1,19 +1,18 @@
 @use './variables';
 
 @mixin blog-article {
-    margin-left: 3vw;
     display: flex;
     flex-direction: column;
-    padding: 3vh 1vw 1vh;
+    padding: 3vh 4vw 1vh;
     text-align: justify;
     text-align-last: left;
-
+  
     p {
-        padding: 3vh 0vw;
+      padding: 3vh 0;
     }
-
+  
     h2 {
-        padding-top: 2vh;
+      padding-top: 2vh;
     }
 }
 
