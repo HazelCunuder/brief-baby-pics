@@ -5,7 +5,7 @@
 
 
 #contact-form {
-    background-color: $accent-color;
+    background-color: $main-color;
     padding: 5vh 5vw;
     border-radius: 1.6em;
     max-width: 80vw;
@@ -25,7 +25,6 @@
       label {
         font-weight: typography.$bold;
         font-family: typography.$font-subheading;
-        color: darken($main-color, 30%);
         margin-bottom: 0.2rem;
       }
   
@@ -33,7 +32,7 @@
       textarea {
         font-family: typography.$font-body;
         padding: 0.75rem 1rem;
-        border: 1px solid lighten($main-color, 30%);
+        border: 1px solid $main-color;
         border-radius: 10px;
         background-color: white;
         font-size: 1rem;
@@ -55,8 +54,7 @@
         text-align: center;
   
         input[type="submit"] {
-          background-color: $main-color;
-          color: white;
+          background-color: $secondary-color;
           border: none;
           padding: 0.8rem 2rem;
           border-radius: 8px;
@@ -65,12 +63,43 @@
           font-family: typography.$font-subheading;
           cursor: pointer;
           transition: background-color 0.3s ease;
-  
-          &:hover {
-            background-color: darken($accent-color, 10%);
-          }
+        }
+      }
+    }
+
+  @media (min-width: 768px) {
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem 2vw;
+
+      label, input, textarea {
+        font-size: 1.6rem;
+      }
+
+      label:nth-of-type(1) {
+        grid-column: 1;
+        grid-row-start: 1;
+      }
+
+      label:nth-of-type(2) {
+        grid-column: 2;
+        grid-row-start: 1;
+      }
+
+      label:nth-of-type(n+3),
+      input[type="email"],
+      textarea,
+      .send-button {
+        grid-column: span 2;
+      }
+
+      .send-button {
+        input[type="submit"] {
+          font-size: 2rem;
         }
       }
     }
   }
+}
   

@@ -1,18 +1,18 @@
 @use 'base/reset';
-@use 'abstracts/variables';
 @use 'base/typography';
+
+@use 'abstracts/variables';
+
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/grid';
+
 @use 'components/buttons';
-@use 'pages/accueil';
+
 @use 'pages/studio';
 @use 'pages/gallerie';
 @use 'pages/tarifs';
 @use 'pages/about';
 @use 'pages/contact';
 @use 'pages/blog';
-
-html {
-    overflow-x: hidden;
-}
+@use 'pages/accueil';
