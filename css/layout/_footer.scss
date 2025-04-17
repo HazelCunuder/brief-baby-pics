@@ -24,9 +24,6 @@ footer {
 
     .social-media {
         text-align: center;
-        b {
-          font-size: 1.25em;
-        }
 
         .sm-logo {
             display: flex;
@@ -46,10 +43,6 @@ footer {
       display: flex;
       flex-direction: column;
       align-content: space-around;
-      
-      b {
-        font-size: 1.25em;
-      }
 
       p {
         align-self: start;
@@ -63,7 +56,6 @@ footer {
       flex-wrap: wrap;
       justify-content: center;
       padding: 2vh 20vw;
-      font-size: 0.9em;
       text-align: center;
     }
     @media (min-width: 768px) {
@@ -71,6 +63,10 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         align-items: center;
+
+        a {
+          font-size: 1.4rem;
+        }
     
         .logo {
           grid-row: span 3;
@@ -83,15 +79,17 @@ footer {
           grid-column: 2;
           margin-left: 4vw;
           text-align: left;
-          border-right: thin solid;
+          padding-left: 2vw;
+          border-left: thin solid;
   
           .sm-logo {
   
               justify-content: flex-start;
+              align-content: flex-end;
   
               img {
                   max-width: 60px;
-                  margin: 2vh 2vw 2vh 0vw
+                  margin: 2vh 2vw 0vh 0vw
               }
           }
         }
@@ -100,6 +98,8 @@ footer {
           grid-row: 2;
           grid-column: 3;
           text-align: left;
+          border-left: thin solid;
+          padding-left: 2vw;
         }
     
         #copyrights {
